@@ -4,7 +4,7 @@
     "slug": "clothe_shop",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/coffee-icon.png",
     "scheme": "clotheshop",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -28,15 +28,27 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "image": "./assets/images/coffee-splash.png",
+          
+          "resizeMode": "cover",
+          "backgroundColor": "#000000"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "edf7828e-d363-4c10-9a3c-054b1399151d"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/edf7828e-d363-4c10-9a3c-054b1399151d"
     }
   }
 }
