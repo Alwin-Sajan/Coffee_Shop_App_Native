@@ -7,7 +7,7 @@ import { Appearance } from 'react-native';
 import { Colors } from '@/constants/Colors';
 
 export default function RootLayout() {
-  const colorScheme = Appearance.getColorScheme()||'dark';
+  const colorScheme = Appearance.getColorScheme();
   const theme = colorScheme === 'dark' ? Colors.dark : Colors.light;
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -19,8 +19,8 @@ export default function RootLayout() {
   }
 
   return (
-    <>
-      <Stack screenOptions={{headerStyle:{ backgroundColor: theme.headerBackground}, headerTintColor: theme.text, headerShadowVisible: false}}>
+    <> 
+      <Stack screenOptions={{headerStyle:{ backgroundColor: theme.headerBackground},headerTintColor:theme.text, headerShadowVisible: false}}>
         {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
         <Stack.Screen name="index" options={{ title: 'Home', headerShown: false }} />
         <Stack.Screen name="contact" options={{ title: 'Contact',headerShown:true ,headerTitle:'Contact Us'}} />
